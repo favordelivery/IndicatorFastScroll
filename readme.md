@@ -3,6 +3,18 @@
 # Indicator Fast Scroll
 ###### by reddit
 
+## Publishing
+
+This repo does not support automated publishing. The version must be updated in the build.gradle file under
+`publications`. In addition, the global gradle.properties file must contain two new properties:
+```
+IndicatorFastScrollRepoUsername=favordelivery
+IndicatorFastScrollRepoPassword=<token_here>
+```
+Once those are in place, then running the command 
+`publishIndicatorFastScrollPublicationToIndicatorFastScrollRepoRepository` will publish the package to the internal
+copy of this repo.
+
 ## Features
 
 * Simple interface for expressing your data via fast scroll indicators
@@ -17,7 +29,7 @@
 Add the dependency to your app's `build.gradle`:
 ##### AndroidX:
 ```groovy
-implementation 'com.reddit:indicator-fast-scroll:1.4.0'
+implementation 'com.reddit:indicator-fast-scroll:1.4.0-favor'
 ```
 ##### Pre-AndroidX (older projects):
 ```groovy
